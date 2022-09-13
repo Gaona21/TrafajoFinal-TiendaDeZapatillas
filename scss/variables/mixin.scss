@@ -1,0 +1,5 @@
+@mixin tipografia($size, $color){
+		color: $color;
+		font-size: $size;
+		font-family: $fuentePrincipal;
+}
