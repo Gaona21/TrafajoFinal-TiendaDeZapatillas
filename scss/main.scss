@@ -8,6 +8,10 @@
 	box-sizing: border-box;
 }
 
+main{
+	min-height: 90vh;
+}
+
 .menu, .contNav{
 	background: black;
 }
@@ -151,6 +155,10 @@
 					transition: 2s;
 				}
 			}
+
+			.sinStock{
+				visibility: hidden;
+			}
 		}
 	}
 }
@@ -177,7 +185,7 @@
 }
 
 .contenedorFormulario{
-	height: 75vh;
+	min-height: 90vh;
 	width: 100%;
 }
 
@@ -199,7 +207,6 @@
 	.contenedorImg{
 		width: 47%;
 		height: 500px;
-		border: 1px solid #dee2e6;
 		margin-top: 20px;
 		margin-bottom: 20px;
 		display: flex;
@@ -210,12 +217,15 @@
 		.imgZapatillas{
 			width: 100%;
 		}
+	}
+
+	.separadorVertical{
+		border: 1px solid #dee2e6;
 	} 
 
 	.contenedorBody{
 		width: 47%;
 		height: 500px;
-		border: 1px solid #dee2e6;
 		margin-top: 20px;
 		margin-bottom: 20px;
 		display: flex;
@@ -235,14 +245,68 @@
 	}
 }
 
+.ContenedorSugerencia{
+	width: 90%;
+	margin:25px  auto 25px; 
+
+	&--Card{
+		display: flex;
+		flex-direction: row;
+		overflow-x: scroll;
+
+		.sugerencia{
+			width: 310px;
+			margin: 5px 50px 5px 0px; 
+			border:1px solid #dee2e6;
+			border-radius: 5px;
+
+			img{
+				width: 300px;
+			}
+		}
+	}
+}
+
+@media(max-width: 2560px){
+	.carousel-inner{
+		height: 1000px;
+	}
+
+	.contenedorCard{
+		.Card{
+			height: 550px;
+		}
+	}
+}
+
+@media(max-width: 1440px){
+	.carousel-inner{
+		height: 600px;
+	}
+
+	.contenedorCard{
+		.Card{
+			height: 400px;
+		}
+	}
+}
+
 @media(max-width: 1024px){
 
 	.carousel-inner{
 		height: 390px;
 	}
 
-	.contenedorImgCard{
-		height: 300px;
+	.contenedorCard{
+		.Card{
+			height: 300px;
+
+			.card-Body{
+				.tituloCard{
+					height: 60px;
+				}
+			}
+		}
 	}
 
 	.contenedorFormulario{
@@ -266,11 +330,13 @@
 		}
 	}
 
-	.Card{
-		width: 47%;
+	.contenedorCard{
+		.Card{
+			width: 47%;
 
-		.contenedorImgCard{
+			.contenedorImgCard{
 			height: 390px;
+			}
 		}
 	}
 
@@ -288,7 +354,7 @@
 @media(max-width: 425px){
 
 	.carousel-inner{
-		height: 140px;
+		height: 200px;
 	}
 
 	.contenedorCategoriaNA{
@@ -301,9 +367,9 @@
 
 		.Card{
 			width: 90%;
-
+			height: 350px;
 			.contenedorImgCard{
-				height: 350px;
+				//height: 350px;
 			}
 		}
 	}

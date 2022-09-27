@@ -11,6 +11,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+main {
+  min-height: 90vh; }
+
 .menu, .contNav {
   background: black; }
 
@@ -120,6 +123,8 @@
       .contenedorCard .Card .card-Body .botonCard:hover {
         border-radius: 20px 100px;
         transition: 2s; }
+    .contenedorCard .Card .card-Body .sinStock {
+      visibility: hidden; }
 
 .piePagina {
   width: 100%;
@@ -142,7 +147,7 @@
     font-family: "Bebas Neue", cursive; }
 
 .contenedorFormulario {
-  height: 75vh;
+  min-height: 90vh;
   width: 100%; }
 
 .contenedorZapatillas {
@@ -158,7 +163,6 @@
   .contenedorZapatillas .contenedorImg {
     width: 47%;
     height: 500px;
-    border: 1px solid #dee2e6;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -167,10 +171,11 @@
     border-radius: 5px; }
     .contenedorZapatillas .contenedorImg .imgZapatillas {
       width: 100%; }
+  .contenedorZapatillas .separadorVertical {
+    border: 1px solid #dee2e6; }
   .contenedorZapatillas .contenedorBody {
     width: 47%;
     height: 500px;
-    border: 1px solid #dee2e6;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -186,11 +191,40 @@
       border: none;
       padding: 5px; }
 
+.ContenedorSugerencia {
+  width: 90%;
+  margin: 25px  auto 25px; }
+  .ContenedorSugerencia--Card {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll; }
+    .ContenedorSugerencia--Card .sugerencia {
+      width: 310px;
+      margin: 5px 50px 5px 0px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px; }
+      .ContenedorSugerencia--Card .sugerencia img {
+        width: 300px; }
+
+@media (max-width: 2560px) {
+  .carousel-inner {
+    height: 1000px; }
+  .contenedorCard .Card {
+    height: 550px; } }
+
+@media (max-width: 1440px) {
+  .carousel-inner {
+    height: 600px; }
+  .contenedorCard .Card {
+    height: 400px; } }
+
 @media (max-width: 1024px) {
   .carousel-inner {
     height: 390px; }
-  .contenedorImgCard {
+  .contenedorCard .Card {
     height: 300px; }
+    .contenedorCard .Card .card-Body .tituloCard {
+      height: 60px; }
   .contenedorFormulario {
     height: 1100%; } }
 
@@ -202,9 +236,9 @@
     margin: 10px 10px 10px 0px;
     filter: blur(0px);
     overflow: hidden; }
-  .Card {
+  .contenedorCard .Card {
     width: 47%; }
-    .Card .contenedorImgCard {
+    .contenedorCard .Card .contenedorImgCard {
       height: 390px; }
   .contenedorZapatillas .contenedorImg {
     height: 550px; }
@@ -213,16 +247,15 @@
 
 @media (max-width: 425px) {
   .carousel-inner {
-    height: 140px; }
+    height: 200px; }
   .contenedorCategoriaNA {
     display: none; }
   .contenedorCard {
     flex-direction: column;
     align-content: space-around; }
     .contenedorCard .Card {
-      width: 90%; }
-      .contenedorCard .Card .contenedorImgCard {
-        height: 350px; }
+      width: 90%;
+      height: 350px; }
   .piePagina {
     flex-direction: column-reverse;
     align-items: center;
