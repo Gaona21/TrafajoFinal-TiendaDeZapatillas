@@ -1,0 +1,32 @@
+cosas agregadas en los siguientes sitios web:
+
+Index.html
+	-title: Zapatillas GC|Inicio
+	-description: zapatillas originales importadas del exterior y al mejor precio
+	-keywords: zapatillas, calzados nike, adidas, jordan, air, original
+	-h1: Las mejores zapatillas
+	-alt: descripcion a las imagenes.
+
+adidas.html
+	-title: Zapatillas Adidas
+	-description: Zapatillas GC te trae las adidas originales y al mejor precio
+	-keywords: zapatillas, calzados,  adidas, jordan,  original
+	-h1: Zapatillas ADIDAS
+
+nike.html
+	-title: Zapatillas Nike
+	-description: Zapatillas GC te trae las nike originales y al mejor precio
+	-keywords: zapatillas, calzados,  nike, air,  original, oferta
+	-h1: Zapatillas NIKE
+
+suscribite.html
+	-title: Suscribite
+	-description: Formulario de inscripcion para recibir las novedades mas recientes y las 				  mejores ofertas
+	-keywords: formulario, oferta,  novedades, inscripcion
+	-h1: Suscribite y no te pierdas de las ofertas
+
+Pagina de las zapatillas destacadas
+	-title: El nombre de la zapatilla
+	-description: Aprovechá a Comprar con los Mejores Descuentos del Año en Zapatillas GC. 	¡Comprá Ahora! no te pierdas las nombre de las zapatillas.
+	-keywords: zapatillas, "adidas o nike", sneaker, "nombre de la zapatillas", calzados.
+	-h1: El nombre de la zapatilla

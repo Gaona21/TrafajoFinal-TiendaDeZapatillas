@@ -1,0 +1,33 @@
+.piePagina{
+	width: 100%;
+	background: black;
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	text-align: center;
+
+	.infoCreador{
+		width: 70%;
+		@include tipografia(18px,white);
+		margin-top: 20px;
+	}
+
+	.menuRedesSociales{
+		width: 30%;
+		margin: auto;
+		@include tipografia(20px,white);
+	}
+}
+
+@media(max-width: 425px){
+
+	.piePagina{
+		flex-direction: column-reverse;
+		align-items: center;
+		display: flex;
+
+		.menuRedesSociales{
+			margin-top: 10px;
+		}
+	}
+}

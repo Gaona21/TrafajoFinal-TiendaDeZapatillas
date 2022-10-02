@@ -1,0 +1,16 @@
+ .contenedorSubtitulo{
+	width: 90%;
+	margin: 20px auto;
+	border-top:1px solid #dee2e6 ;
+	text-align: center;
+
+	.Subtitulo{
+		font-family: $fuentePrincipal;
+		margin: 5px 0px 0px 0px;
+	}
+
+	.textoOferta{
+		@include tipografia(20px,black);
+		margin: 0px;
+	}
+}

@@ -1,0 +1,21 @@
+.ContenedorSugerencia{
+	width: 90%;
+	margin:25px  auto 25px; 
+
+	&--Card{
+		display: flex;
+		flex-direction: row;
+		overflow-x: scroll;
+
+		.sugerencia{
+			width: 310px;
+			margin: 5px 50px 5px 0px; 
+			border:1px solid #dee2e6;
+			border-radius: 5px;
+
+			img{
+				width: 300px;
+			}
+		}
+	}
+}

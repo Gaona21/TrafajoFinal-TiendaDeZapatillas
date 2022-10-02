@@ -35,6 +35,26 @@ main {
 .carousel-inner {
   height: 500px; }
 
+@media (max-width: 2560px) {
+  .carousel-inner {
+    height: 1000px; } }
+
+@media (max-width: 1440px) {
+  .carousel-inner {
+    height: 600px; } }
+
+@media (max-width: 1024px) {
+  .carousel-inner {
+    height: 390px; } }
+
+@media (max-width: 768px) {
+  .carousel-inner {
+    height: 290px; } }
+
+@media (max-width: 425px) {
+  .carousel-inner {
+    height: 200px; } }
+
 .contenedorSubtitulo {
   width: 90%;
   margin: 20px auto;
@@ -80,9 +100,21 @@ main {
       transform: scale(1.1);
       transition: 1s; }
 
+@media (max-width: 768px) {
+  .contenedorCategoriaNA .contenedorAdidas, .contenedorCategoriaNA .contenedorNike {
+    width: 50%;
+    margin: 10px 10px 10px 0px;
+    filter: blur(0px);
+    overflow: hidden; } }
+
+@media (max-width: 425px) {
+  .contenedorCategoriaNA {
+    display: none; } }
+
 .contenedorCard {
   width: 90%;
   margin: auto;
+  min-height: 90vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -126,6 +158,34 @@ main {
     .contenedorCard .Card .card-Body .sinStock {
       visibility: hidden; }
 
+@media (max-width: 2560px) {
+  .contenedorCard .Card {
+    height: 550px; } }
+
+@media (max-width: 1440px) {
+  .contenedorCard .Card {
+    height: 400px; } }
+
+@media (max-width: 1024px) {
+  .contenedorCard .Card {
+    height: 300px; }
+    .contenedorCard .Card .card-Body .tituloCard {
+      height: 60px; } }
+
+@media (max-width: 768px) {
+  .contenedorCard .Card {
+    width: 47%; }
+    .contenedorCard .Card .contenedorImgCard {
+      height: 390px; } }
+
+@media (max-width: 425px) {
+  .contenedorCard {
+    flex-direction: column;
+    align-content: space-around; }
+    .contenedorCard .Card {
+      width: 90%;
+      height: 350px; } }
+
 .piePagina {
   width: 100%;
   background: black;
@@ -146,35 +206,43 @@ main {
     font-size: 20px;
     font-family: "Bebas Neue", cursive; }
 
-.contenedorFormulario {
-  min-height: 90vh;
-  width: 100%; }
+@media (max-width: 425px) {
+  .piePagina {
+    flex-direction: column-reverse;
+    align-items: center;
+    display: flex; }
+    .piePagina .menuRedesSociales {
+      margin-top: 10px; } }
 
 .contenedorZapatillas {
   width: 90%;
   border: 1px solid #dee2e6;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-areas: "cuadroUno liniaMedio cuadroDos";
+  grid-template-rows: 100%;
+  grid-template-columns: 49% 1px 49%;
+  justify-content: space-around;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 5px; }
   .contenedorZapatillas .contenedorImg {
-    width: 47%;
+    width: 100%;
     height: 500px;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px; }
+    border-radius: 5px;
+    grid-area: cuadroUno; }
     .contenedorZapatillas .contenedorImg .imgZapatillas {
       width: 100%; }
   .contenedorZapatillas .separadorVertical {
-    border: 1px solid #dee2e6; }
+    border: 1px solid #dee2e6;
+    grid-area: liniaMedio; }
   .contenedorZapatillas .contenedorBody {
-    width: 47%;
+    width: 100%;
     height: 500px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -182,7 +250,8 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    grid-area: cuadroDos; }
     .contenedorZapatillas .contenedorBody .botonComprar {
       width: 150px;
       margin: auto;
@@ -190,6 +259,30 @@ main {
       border-radius: 5px;
       border: none;
       padding: 5px; }
+
+@media (max-width: 768px) {
+  .contenedorZapatillas .contenedorImg {
+    height: 550px; }
+  .contenedorZapatillas .contenedorBody {
+    height: 550px; } }
+
+@media (max-width: 425px) {
+  .contenedorZapatillas {
+    width: 90%;
+    display: grid;
+    grid-template-areas: "cuadroUno" "liniaMedio" "cuadroDos";
+    grid-template-rows: 30% 1px 49%;
+    grid-template-columns: 100%; }
+    .contenedorZapatillas .contenedorImg {
+      width: 100%;
+      height: 210px;
+      margin-bottom: 0px;
+      border: none; }
+      .contenedorZapatillas .contenedorImg .imgZapatillas {
+        width: 100%; }
+    .contenedorZapatillas .contenedorBody {
+      width: 100%;
+      border: none; } }
 
 .ContenedorSugerencia {
   width: 90%;
@@ -206,73 +299,10 @@ main {
       .ContenedorSugerencia--Card .sugerencia img {
         width: 300px; }
 
-@media (max-width: 2560px) {
-  .carousel-inner {
-    height: 1000px; }
-  .contenedorCard .Card {
-    height: 550px; } }
-
-@media (max-width: 1440px) {
-  .carousel-inner {
-    height: 600px; }
-  .contenedorCard .Card {
-    height: 400px; } }
+.contenedorFormulario {
+  min-height: 90vh;
+  width: 100%; }
 
 @media (max-width: 1024px) {
-  .carousel-inner {
-    height: 390px; }
-  .contenedorCard .Card {
-    height: 300px; }
-    .contenedorCard .Card .card-Body .tituloCard {
-      height: 60px; }
   .contenedorFormulario {
     height: 1100%; } }
-
-@media (max-width: 768px) {
-  .carousel-inner {
-    height: 290px; }
-  .contenedorCategoriaNA .contenedorAdidas, .contenedorCategoriaNA .contenedorNike {
-    width: 50%;
-    margin: 10px 10px 10px 0px;
-    filter: blur(0px);
-    overflow: hidden; }
-  .contenedorCard .Card {
-    width: 47%; }
-    .contenedorCard .Card .contenedorImgCard {
-      height: 390px; }
-  .contenedorZapatillas .contenedorImg {
-    height: 550px; }
-  .contenedorZapatillas .contenedorBody {
-    height: 550px; } }
-
-@media (max-width: 425px) {
-  .carousel-inner {
-    height: 200px; }
-  .contenedorCategoriaNA {
-    display: none; }
-  .contenedorCard {
-    flex-direction: column;
-    align-content: space-around; }
-    .contenedorCard .Card {
-      width: 90%;
-      height: 350px; }
-  .piePagina {
-    flex-direction: column-reverse;
-    align-items: center;
-    display: flex; }
-    .piePagina .menuRedesSociales {
-      margin-top: 10px; }
-  .contenedorZapatillas {
-    width: 90%;
-    display: flex;
-    flex-direction: column; }
-    .contenedorZapatillas .contenedorImg {
-      width: 100%;
-      height: 210px;
-      margin-bottom: 0px;
-      border: none; }
-      .contenedorZapatillas .contenedorImg .imgZapatillas {
-        width: 100%; }
-    .contenedorZapatillas .contenedorBody {
-      width: 100%;
-      border: none; } }

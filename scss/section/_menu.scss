@@ -1,0 +1,21 @@
+.menu, .contNav{
+	background: black;
+}
+
+.menu{
+	.logoMenu{
+		@include tipografia(30px,white);
+	}
+
+	.linkMenu{
+		@include tipografia(18px,white);
+	}
+
+	.cajaSubMenu{
+		background: black;
+
+		.dropdown-item:hover{
+			background-color: black!important;
+		}
+	}
+}

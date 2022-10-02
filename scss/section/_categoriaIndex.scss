@@ -1,0 +1,62 @@
+.contenedorCategoriaNA{
+	width: 90%;
+	margin: auto;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.contenedorAdidas, .contenedorNike{
+		width: 50%;
+		margin: 10px 10px 10px 0px;
+		filter: blur(3px);
+		overflow:hidden;
+
+		.imgLogo{
+			width: 100%;
+		}
+	}
+
+	.contenedorAdidas:hover{
+		box-shadow: 5px 5px 7px #aaaaaa;
+		transition: 0.5s;
+		filter: blur(0px);
+
+		& .imgLogo {
+			-webkit-transform:scale(1.1);
+			transform:scale(1.1);
+			transition: 1s;
+		}
+	}
+
+	.contenedorNike:hover{
+		box-shadow: 5px 5px 7px #aaaaaa;
+		transition: 0.5s;
+		filter: blur(0px);
+
+		& .imgLogo {
+			-webkit-transform:scale(1.1);
+			transform:scale(1.1);
+			transition: 1s;
+		}
+	}
+}
+
+@media(max-width: 768px){
+
+	.contenedorCategoriaNA{
+		.contenedorAdidas, .contenedorNike {
+    		width: 50%;
+    		margin: 10px 10px 10px 0px;
+    		filter: blur(0px);
+    		overflow: hidden;
+		}
+	}
+}
+
+@media(max-width: 425px){
+
+	.contenedorCategoriaNA{
+		display: none;
+	}
+}

@@ -1,0 +1,11 @@
+.contenedorFormulario{
+	min-height: 90vh;
+	width: 100%;
+}
+
+@media(max-width: 1024px){
+
+	.contenedorFormulario{
+		height: 1100%;
+	}
+}
